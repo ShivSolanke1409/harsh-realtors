@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container my-5">
+    <div class="row g-4">
+
+        <!-- Property Image -->
+        <div class="col-md-6">
+            <img src="{{ property.image.url }}"
+                 class="img-fluid rounded property-detail-img"
+                 alt="{{ property.title }}">
+        </div>
+
+        <!-- Property Info -->
+        <div class="col-md-6">
+            <h2>{{ property.title }}</h2>
+            <p class="text-muted">{{ property.location }}</p>
+
+            <table class="table table-sm mt-3">
+                <tr><th>Type</th><td>{{ property.property_type }}</td></tr>
+                <tr><th>Area</th><td>{{ property.area_sqft }} sq.ft</td></tr>
+                <tr><th>Furnishing</th><td>{{ property.furnishing }}</td></tr>
+                <tr><th>Parking</th><td>{{ property.parking }}</td></tr>
+                <tr><th>Washrooms</th><td>{{ property.washrooms }}</td></tr>
+                <tr><th>Floor</th><td>{{ property.floor }} / {{ property.total_floors }}</td></tr>
+                <tr><th>Maintenance</th><td>{{ property.maintenance }}</td></tr>
+                <tr><th>Possession</th><td>{{ property.possession }}</td></tr>
+                <tr><th>Suitable For</th><td>{{ property.suitable_for }}</td></tr>
+            </table>
+
+            <a href="{% url 'enquiry' %}" class="btn btn-danger w-100 mb-2">
+                Enquire for Details
+            </a>
+
+            <a href="https://wa.me/91XXXXXXXXXX"
+               class="btn btn-success w-100">
+                WhatsApp Now
+            </a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

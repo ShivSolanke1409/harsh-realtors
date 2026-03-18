@@ -1,0 +1,178 @@
+.top-bar {
+    background: #0a2a4a;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.hero {
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.55);
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.property-card {
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+/* Home & listing page images */
+.property-card .image-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #f2f2f2;
+    border-radius: 6px 6px 0 0;
+}
+
+.property-card .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Admin dashboard styles */
+.admin-box {
+    background: #0a2a4a;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.admin-box .new { color: #4caf50; }
+.admin-box .contacted { color: #ffc107; }
+.admin-box .closed { color: #ccc; }
+
+/* Property detail page image */
+.property-image-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;   /* professional real estate ratio */
+    overflow: hidden;
+    border-radius: 6px;
+    background: #f2f2f2;
+}
+
+.property-image-wrapper img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+@media (max-width: 576px) {
+    .property-card h5 {
+        font-size: 1rem;
+    }
+
+    .property-card p {
+        font-size: 0.9rem;
+    }
+
+    .property-card .btn {
+        width: 100%;
+    }
+    property-image-wrapper{
+        height: 260px;
+    }
+    .table th {
+        width: 45%;
+    }
+}
+
+/* Enquiry Form Styles */
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+    padding: 12px;
+    font-size: 16px; /* prevents zoom on mobile */
+}
+
+.enquiry-form button {
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* Hero Section with Slideshow */
+.hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+    color: #fff;
+}
+
+.hero-slides {
+    position: absolute;
+    inset: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero .overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.55);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Footer Styles */
+.site-footer {
+    background: #0a2a4a;
+    color: #f8f9fa;
+    font-size: 14px;
+    padding: 24px 0;
+}
+
+.site-footer h5,
+.site-footer h6 {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.site-footer p,
+.site-footer a {
+    margin-bottom: 6px;
+}
+
+.site-footer a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.site-footer hr {
+    border-color: rgba(249, 248, 248, 0.92);
+    margin: 16px 0;
+}
